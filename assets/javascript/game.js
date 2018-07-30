@@ -19,6 +19,7 @@ var archer = {
     counterPower: ((Math.floor(Math.random() * 5) * 5) + 5), //counter attack power from 5-25 iterates from 5
 }
 
+// call stats ie by lancer.healthPoints
 
 //Reset stats with restart button
 function reset() {
@@ -40,5 +41,20 @@ function reset() {
         counterPower: ((Math.floor(Math.random() * 5) * 5) + 5), //counter attack power from 5-25 iterates from 5
     }
 }
+
+
+function update(){
+    //Update the character stats
+    $("#saberHP").text(saber.healthPoints);
+    $("#lancerHP").text(lancer.healthPoints);
+    $("#archerHP").text(archer.healthPoints);
+}
+
+//Update them now
+update();
+
+//Transfer chosen character into attacker position
+
+
 
 //Attack power multiplier
